@@ -81,6 +81,3 @@ exit /b
 cls&echo(&echo   All camera ^& microphone access [31mdenied[0m.&>nul pause
 goto :MENU
 exit /b
-
-:: Network Connectivity Status Indicator (NCSI)
-:: reg add "HKLM\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet" /v "EnableActiveProbing" /t REG_DWORD /d "1" /f

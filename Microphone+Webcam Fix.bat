@@ -43,7 +43,7 @@ exit /b
 	reg delete "HKLM\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy" /v "LetAppsAccessMicrophone_UserInControlOfTheseApps" /f
 	gpupdate /force
 )
-cls&echo(&echo   All camera ^& microphone access [32mallowed[0m.&>nul pause /t 3&goto :MENU
+cls&echo(&echo   All camera ^& microphone access [32mallowed[0m.&>nul timeout /t 5 /nobreak&goto :MENU
 exit /b
 
 :DENY
@@ -68,5 +68,5 @@ exit /b
 	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy" /v "LetAppsAccessMicrophone_UserInControlOfTheseApps" /t REG_MULTI_SZ /f
 	gpupdate /force
 )
-cls&echo(&echo   All camera ^& microphone access [31mdenied[0m.&>nul pause /t 3&goto :MENU
+cls&echo(&echo   All camera ^& microphone access [31mdenied[0m.&>nul timeout /t 5 /nobreak&goto :MENU
 exit /b 0

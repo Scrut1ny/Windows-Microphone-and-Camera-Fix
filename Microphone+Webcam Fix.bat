@@ -35,8 +35,8 @@ exit /b
 	rem Microphone ==========================================================================================================================================
 	
 	reg delete "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy Objects" /f
-	reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{3d3130ff-44d6-48f3-8550-e507f5e6fbc6}" /v "DeviceState" /t REG_DWORD /d "1" /f
-	reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{96e569dd-b719-47c1-8595-4c3266433b8a}" /v "DeviceState" /t REG_DWORD /d "1" /f
+	reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{3d3130ff-44d6-48f3-8550-e507f5e6fbc6}" /v "DeviceState" /t REG_DWORD /d "0x00000001" /f
+	reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{96e569dd-b719-47c1-8595-4c3266433b8a}" /v "DeviceState" /t REG_DWORD /d "0x00000001" /f
 	reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\microphone" /v "Value" /t REG_SZ /d "Allow" /f
 	reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{2EEF81BE-33FA-4800-9670-1CD474972C3F}" /v "Value" /t REG_SZ /d "Allow" /f
 	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy" /v "LetAppsAccessMicrophone" /d "0x00000001" /t REG_DWORD /f
